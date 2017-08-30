@@ -1,0 +1,29 @@
+.trip-card {
+  background-color: #efefef;
+}
+
+.total-card {
+  background-color: #bdbdbd;
+  font-weight: bold;
+}
+
+.trip-node {
+  font-weight: bold;
+}
+
+.transport-details {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+div[fxFlex]:last-child {
+  text-align: right;
+}
+
+div[fxFlex]:first-child {
+  text-align: left;
+}
+
+div[fxFlex]:not(:first-child):not(:last-child) {
+  text-align: center;
+}

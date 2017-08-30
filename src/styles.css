@@ -1,0 +1,19 @@
+body {
+  padding: 5px 15%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.app-content {
+  padding: 20px;
+}
+
+.app-content md-card {
+  margin: 20px 0px;
+}
+
+.app-content md-card .mat-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
