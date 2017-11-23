@@ -1,0 +1,28 @@
+<md-card class="trip-card" *ngFor="let deal of deals">
+  <md-card-content>
+    <div fxLayout="row" class="trip-node">
+      <div fxFlex>{{deal.departure}}<md-icon>navigate_next</md-icon>{{deal.arrival}}</div>
+      <div fxFlex>{{deal.cost | discount:deal.discount | currency:currency:true}}</div>
+    </div>
+    <div fxLayout="row" class="transport-details">
+      <div fxFlex>{{deal.transport}} {{deal.reference}} for {{deal.duration.h}}h{{deal.duration.m}}</div>
+    </div>
+  </md-card-content>
+</md-card>
+<md-card class="total-card" *ngIf="deals">
+  <md-card-content>
+    <div fxLayout="row">
+      <div fxFlex>Total</div>
+      <div fxFlex>{{totalDuration | duration:'h'}}</div>
+      <div fxFlex>{{totalCost | currency:currency:true}}</div>
+    </div>
+  </md-card-content>
+</md-card>
+<md-card class="trip-node" *ngIf="!deals">
+  <md-card-content>
+    <h2>No trip available.</h2>
+  </md-card-content>
+</md-card>
+<div class="form-field">
+  <button md-raised-button (click)="goBack()" color="primary"><md-icon>refresh</md-icon>Reset</button>
+</div>

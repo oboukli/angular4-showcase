@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trip Sorter</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
+  <link href="node_modules/material-design-icons/iconfont/material-icons.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('main.js').catch(function (err) {
+      console.error(err);
+    });
+
+  </script>
+</head>
+
+<body>
+  <trip-sorter>Loading...</trip-sorter>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-105594249-1', 'auto');
+    ga('send', 'pageview');
+  
+  </script>
+</body>
+
+</html>

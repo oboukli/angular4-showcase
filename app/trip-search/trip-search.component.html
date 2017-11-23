@@ -1,0 +1,21 @@
+<form #searchForm="ngForm">
+  <div class="form-field">
+    <md-select name="from" placeholder="From" required [(ngModel)]="selectedDeparture">
+      <md-option *ngFor="let departure of departures" [value]="departure">{{departure}}</md-option>
+    </md-select>
+  </div>
+  <div class="form-field">
+    <md-select name="to" placeholder="To" required validateNotEqual="from" [(ngModel)]="selectedArrival">
+      <md-option *ngFor="let arrival of arrivals" [value]="arrival">{{arrival}}</md-option>
+    </md-select>
+  </div>
+  <div class="form-field">
+    <md-button-toggle-group name="preferFastest" required #group="mdButtonToggleGroup" [(ngModel)]="preferFastest">
+      <md-button-toggle value="false"><md-icon>attach_money</md-icon>Cheapest</md-button-toggle>
+      <md-button-toggle value="true"><md-icon>timer</md-icon>Fastest</md-button-toggle>
+    </md-button-toggle-group>
+  </div>
+  <div class="form-field">
+    <button type="button" md-raised-button (click)="!searchForm.invalid && searchDeals()" [disabled]="searchForm.invalid" color="primary"><md-icon>search</md-icon>Search</button>
+  </div>
+</form>
